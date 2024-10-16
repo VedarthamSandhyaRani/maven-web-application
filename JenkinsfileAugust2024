@@ -16,11 +16,11 @@ git branch: 'dev', credentialsId: '8190a80d-50f0-4780-9e89-13555c968647', url: '
 stage('Build'){
 sh "$mavenHome/bin/mvn clean package"
 }
-
+/*
 stage('UploadArtifactsIntoNexus'){
 sh "$mavenHome/bin/mvn clean deploy"
 }
-
+*/
 
 stage('Deploy application tomcat'){
 sshagent(['9dd64893-fff3-4bba-8e8c-8a25d3cd3c23']) {
